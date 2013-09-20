@@ -1,0 +1,32 @@
+body {
+	font-family: sans-serif;
+	color: rgb(200, 200, 200);
+	background-color: rgb(39,40,34);
+}
+
+h1 {
+	font-size: 20px;
+	font-weight: normal;
+}
+
+.appToolbar {
+	border: solid 1px rgb(51, 52, 56);
+	background-color: rgb(45, 46, 50);
+	overflow: auto; /* for floats */
+}
+
+.appToolbar h1 {
+	margin-top: 0;
+	margin-bottom: 0;
+	float: left;
+}
+
+.appToolbar .functions {
+	float: right;
+}
+
+.appContainer {
+	border: solid 1px rgb(51, 52, 46);
+	background-color: rgb(45, 46, 40);
+}
+
