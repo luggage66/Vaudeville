@@ -40,3 +40,15 @@ h1 {
 	margin: 0.2em;
 }
 
+#processStatus {
+	vertical-align: middle;
+}
+
+.good {
+	color: #A6E22E;
+}
+
+.bad {
+	color: #F92672;
+}
+
