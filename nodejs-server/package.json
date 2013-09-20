@@ -13,6 +13,7 @@
   "author": "dmull",
   "license": "BSD",
   "dependencies": {
-    "connect": "~2.9.0"
+    "connect": "~2.9.0",
+    "socket.io": "~0.9.16"
   }
 }

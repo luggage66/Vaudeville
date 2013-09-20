@@ -3,6 +3,9 @@
 	<head>
 		<title>A title!</title>
 		<link rel="stylesheet" type="text/css" media="all" href="style.css" />
+		<script type="text/javascript" src="/socket.io/socket.io.js"></script>
+		<script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+		<script type="text/javascript" src="/clientscript.js"></script>
 	</head>
 	<body>
 		<h1>Vaudeville Client</h1>
@@ -10,13 +13,18 @@
 		<div class="appToolbar">
 			<h1>{app name}</h1>
 			<div class="functions">
-				<button>Kill</button>
+				<button id="killButton">Kill</button>
 				<button>Restart</button>
 			</div>
 		</div>
 		<div class="appContainer">
 			<canvas id="appCanvas">
 			</canvas>
+		</div>
+
+		<h1>Log</h1>
+
+		<div id="logs">
 		</div>
 
 		
