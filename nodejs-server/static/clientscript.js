@@ -1,6 +1,9 @@
 var socket;
 
 $(function() {
+
+	var canvas = $('#appCanvas').get(0)
+	var context = canvas.getContext('2d');
 	
 	socket = io.connect('http://localhost:8888');
 
@@ -18,6 +21,21 @@ $(function() {
 				ui.removeClass('bad').addClass('good');
 			else
 				ui.removeClass('good').addClass('bad');
+		});
+
+		socket.on('resize', function(data) {
+			canvas.width = data[0];
+			canvas.height = data[1];
+		});
+
+		socket.on('draw', function(data) {
+			for (prop in data.props) {
+				context[prop] = data.props[prop];
+			}
+			for (func in data.calls) {
+				context[func].apply(context, data.calls[func]);
+			}
+			
 		});
 	});
 
